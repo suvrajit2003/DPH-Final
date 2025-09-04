@@ -4,7 +4,7 @@ import { Op } from 'sequelize';
 // ✅ USER: Public GET function for fetching only active news/events
 export const getAllActiveEvents = async (req, res) => {
   try {
-    console.log('👤 USER API Called: getAllActiveEvents - ONLY ACTIVE EVENTS');
+    
     
     const page = parseInt(req.query.page, 10) || 1;
     const limit = parseInt(req.query.limit, 10) || 10;
@@ -13,7 +13,7 @@ export const getAllActiveEvents = async (req, res) => {
 
     // USER KE LIYE: STRICT FILTER - ONLY ACTIVE EVENTS
     const whereClause = {
-      status: 'Active' // ✅ YAHAN PAR STATUS FILTER LAGANA IMPORTANT HAI
+      status: 'Active' 
     };
 
     if (search) {

@@ -55,6 +55,7 @@ import generatedLinkRoutes from "./routes/GeneratedLinkRoutes.js"
 import userImportantLinkRoutes from "./routes/User/userImportantLinkRoutes.js"
 import userHomeConfigurationRoutes from "./routes/User/userHomeConfigurationRoutes.js"
 import userNewsAndEventRoutes from "./routes/User/userNewsAndEventRoutes.js"
+import userChatbotRoutes from "./routes/User/userChatbotRoutes.js"
 
 const app = express()
 const PORT = process.env.PORT;
@@ -131,6 +132,7 @@ app.use('/api/important-links', importantLinkRoutes);
 app.use('/user-important-links', userImportantLinkRoutes);
 app.use('/user-home-settings', userHomeConfigurationRoutes);
 app.use('/user-news-and-events', userNewsAndEventRoutes);
+app.use('/user-chatbot', userChatbotRoutes);
 
 
 async function startServer() {
